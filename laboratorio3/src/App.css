@@ -1,0 +1,169 @@
+/* src/App.css */
+
+/* Estilos generales de la página */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #f4f4f9;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* Barra de navegación en la parte superior */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #282c34;
+  color: white;
+  padding: 10px 20px;
+}
+
+.navbar h1 {
+  margin: 0;
+}
+
+.navbar button {
+  padding: 8px 16px;
+  background-color: #61dafb;
+  color: black;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.navbar button:hover {
+  background-color: #21a1f1;
+}
+
+/* Disposición de la parte principal de la página */
+.content {
+  display: flex;
+  flex-grow: 1;
+  padding: 20px;
+}
+
+/* Estilos de la lista de tareas (a la izquierda) */
+.task-list {
+  flex: 1;
+  margin-right: 20px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.task-list h2 {
+  margin-bottom: 10px;
+}
+
+.task-list input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+/* Estilos de cada fila de la tarea */
+.task-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.task-row input {
+  margin-right: 10px;
+}
+
+.task-row button {
+  background-color: transparent;
+  border: none;
+  color: #61dafb;
+  cursor: pointer;
+}
+
+.task-row button:hover {
+  text-decoration: underline;
+}
+
+/* Estilos del panel de detalles de tarea (a la derecha) */
+.task-details {
+  flex: 2;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.task-details h2 {
+  margin-bottom: 10px;
+}
+
+.task-details p {
+  margin: 5px 0;
+}
+
+.task-details button {
+  background-color: #ff6961;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.task-details button:hover {
+  background-color: #d9534f;
+}
+
+/* Estilos del formulario para agregar tareas */
+.add-task-form {
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.add-task-form input,
+.add-task-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.add-task-form button {
+  padding: 10px 15px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.add-task-form button[type="submit"] {
+  background-color: #61dafb;
+  color: black;
+}
+
+.add-task-form button[type="submit"]:hover {
+  background-color: #21a1f1;
+}
+
+.add-task-form button[type="button"] {
+  background-color: #ff6961;
+  color: white;
+}
+
+.add-task-form button[type="button"]:hover {
+  background-color: #d9534f;
+}

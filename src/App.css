@@ -1,0 +1,281 @@
+
+/* Estilos generales de la página */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #f4f4f9;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* Barra de navegación en la parte superior */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #e6e6e6ff;
+  color: black;
+  padding: 10px 20px;
+  height: 70px;
+}
+
+.navbar h1 {
+  margin-left: 10px;
+}
+
+.navbar button {
+  padding: 8px 16px;
+  background-color: #008cfdff;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  
+  width: 130px;
+  height: 38px;
+  margin-right: 50px;
+
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.navbar button:hover {
+  background-color: rgb(3, 94, 169);
+}
+
+/* Disposición de la parte principal de la página */
+.content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  height: 650px;
+  padding: 20px;
+}
+
+/* Estilos de la lista de tareas (a la izquierda) */
+.task-list {
+  flex: 1;
+  margin-right: 20px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.task-list h2 {
+  margin-bottom: 10px;
+}
+
+.task-list input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+/* Estilos de cada fila de la tarea */
+.task-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.task-row input {
+  margin-left: -315px;
+  margin-top: 15px;
+}
+
+.span_title{
+  margin-left: -380px;
+  width: 300px;
+  margin-bottom: 5px;
+}
+
+.task-row button {
+  background-color: transparent;
+  border: none;
+  color: #61dafb;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.task-row button:hover {
+  text-decoration: underline;
+}
+
+/* Estilos del panel de detalles de tarea (a la derecha) */
+.task-details {
+  flex: 2;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.task-details h2 {
+  margin-bottom: 10px;
+}
+
+.task-details p {
+  margin: 5px 0;
+}
+
+.task-header {
+  display: flex; /* Usar flexbox para alinear los elementos */
+  justify-content: space-between; /* Espaciado entre el título y la fecha */
+  align-items: center; /* Alinear verticalmente al centro */
+  margin-bottom: 10px; /* Espacio entre el encabezado y la descripción */
+}
+
+.date {
+  margin-left: auto; /* Empuja la fecha al final de la línea */
+  color: #999; /* Color opcional para la fecha */
+}
+
+.button_delete_edit{
+  display: flex;
+  justify-content: center;
+
+  margin-top: 200px;
+  gap: 15px;
+}
+
+.task-details button {
+  background-color: #ff6961;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+
+
+.task-details button:hover {
+  background-color: #d9534f;
+}
+
+/* Estilos del formulario para agregar tareas */
+.add-task-form {
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+
+  max-width: 500px;
+}
+
+.add-task-form input,
+.add-task-form textarea {
+  display: flex;
+  width: 300px;
+  margin-bottom: 15px;
+  padding: 10px;
+  margin-left: -2px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.add-task-form h2{
+  text-align: center;
+}
+
+.add-task-form button {
+  padding: 10px 15px;
+  margin-right: 10px;
+  margin-left: 48px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+
+  
+}
+
+.add-task-form button[type="submit"] {
+  background-color: #61dafb;
+  color: black;
+}
+
+.add-task-form button[type="submit"]:hover {
+  background-color: #21a1f1;
+}
+
+.add-task-form button[type="button"] {
+  background-color: #ff6961;
+  color: white;
+}
+
+.add-task-form button[type="button"]:hover {
+  background-color: #d9534f;
+}
+
+
+/* Superposición con fondo transparente para mantener visible el contenido */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3); /* Fondo oscuro semi-transparente */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Estilos del modal */
+.add-task-form {
+  position: relative;
+  z-index: 1001;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+
+  max-width: 400px;
+}
+
+/* Aplica opacidad al contenido cuando el modal esté activo */
+.content-blurred {
+  opacity: 1.0; /* Añade opacidad */
+}
+
+/* Mantiene el contenido visible pero con menor interacción */
+.content {
+  transition: filter 0.3s ease, opacity 0.3s ease;
+  position: relative;
+  z-index: 0; /* Asegura que el contenido quede detrás del modal */
+}
+
+/* Asegura que la lista de tareas sea visible incluso cuando el modal está activo */
+.task-list {
+  z-index: 1;
+  position: relative;
+}
+
+.filter{
+  max-width: 670px;
+}
+
+svg{
+  max-width: 20px;
+  position: absolute;
+  left: 660px; 
+  top: 17px;
+  transform: translateY(-50%);
+}
+
+.input-container{
+  position: relative;
+}
+
+
